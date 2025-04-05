@@ -7,6 +7,7 @@
 script = ExtResource("1_6miml")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(506, 311)
 texture = ExtResource("2_684ss")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
