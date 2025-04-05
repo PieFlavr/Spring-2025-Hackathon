@@ -1,6 +1,10 @@
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [gd_scene load_steps=13 format=3 uid="uid://b436d7y2kqwom"]
+=======
+[gd_scene load_steps=14 format=3 uid="uid://b436d7y2kqwom"]
+>>>>>>> Stashed changes
 =======
 [gd_scene load_steps=14 format=3 uid="uid://b436d7y2kqwom"]
 >>>>>>> Stashed changes
@@ -23,6 +27,9 @@
 [ext_resource type="Script" uid="uid://d3rntc0gwxcbx" path="res://scenes/npc_kyle.gd" id="8_gee14"]
 [ext_resource type="Texture2D" uid="uid://dseixbt0aws2h" path="res://Assets/Modern tiles_Free/Characters_free/Adam_idle_16x16.png" id="9_0tnpc"]
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -103,7 +110,11 @@ position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 
 [node name="NPC_Wormwood" parent="." instance=ExtResource("3_lbhrr")]
+<<<<<<< Updated upstream
 position = Vector2(88, 120)
+=======
+position = Vector2(90, 180)
+>>>>>>> Stashed changes
 script = ExtResource("4_iywne")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
