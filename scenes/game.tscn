@@ -1,16 +1,5 @@
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[gd_scene load_steps=13 format=3 uid="uid://b436d7y2kqwom"]
-=======
+
 [gd_scene load_steps=14 format=3 uid="uid://b436d7y2kqwom"]
->>>>>>> Stashed changes
-=======
-[gd_scene load_steps=14 format=3 uid="uid://b436d7y2kqwom"]
->>>>>>> Stashed changes
-=======
-[gd_scene load_steps=14 format=3 uid="uid://b436d7y2kqwom"]
->>>>>>> Stashed changes
 
 [ext_resource type="PackedScene" uid="uid://bl8gtsmw3ahjf" path="res://scenes/Player.tscn" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://kn4orwwgbl7i" path="res://Assets/SERENE_VILLAGE_REVAMPED/Construct 3/Autotiles_no_inner_corners_16x16.png" id="3_0tnpc"]
