@@ -10,20 +10,24 @@ func _on_body_entered(body):
 
 func show_choices():
 	showing_choices = true
-	label.text = "Ghost Kyle: Duel me in Smash (Z) or Run Away (X)?"
+	label.text = "Croak (Z) or Hop Race (X)?"
 
 func _process(delta):
 	if not showing_choices or interacted:
 		return
 
 	if Input.is_action_just_pressed("ui_accept"):  # Z
-		label.text = "You defeat Ghost Kyle in a Smash battle. He vanishes in peace..."
-		Global.has_ghost_slayer_title = true
+		label.text = "You croak in sync. Campus Fame +1!"
+		Global.has_frog_token = true
 		interacted = true
 		showing_choices = false
 
 	elif Input.is_action_just_pressed("ui_cancel"):  # X
-		label.text = "Ghost Kyle haunts your dreams. -30 seconds!"
-		Global.time_penalty(30)
+		if randf() > 0.5:
+			label.text = "You won the hop race! Frog Token earned."
+			Global.has_frog_token = true
+		else:
+			label.text = "You fell in the fountain. Ouch."
+			Global.time_penalty(30)
 		interacted = true
 		showing_choices = false

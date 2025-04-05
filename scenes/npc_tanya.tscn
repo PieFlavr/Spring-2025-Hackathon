@@ -1,12 +1,47 @@
-[gd_scene load_steps=4 format=3 uid="uid://cgmv1kkdwaa8"]
+[gd_scene load_steps=4 format=3 uid="uid://yyr5tv24fsar"]
 
 [ext_resource type="Texture2D" uid="uid://dbvhx078t2jw" path="res://Assets/Modern tiles_Free/Characters_free/Alex_idle_16x16.png" id="1_3ejfc"]
-[ext_resource type="Script" uid="uid://dt44emut50ly0" path="res://scripts/npc_tanya.gd" id="1_4shar"]
+
+[sub_resource type="GDScript" id="GDScript_nb1ac"]
+script/source = "extends Area2D
+
+var interacted := false
+var showing_choices := false
+@onready var label = $DialogueBox/Label
+
+func _on_body_entered(body):
+	if body.name == \"Player\" and not interacted:
+		show_choices()
+
+func show_choices():
+	showing_choices = true
+	label.text = \"Help event (Z) or Flirt (X)?\"
+
+func _process(delta):
+	if not showing_choices or interacted:
+		return
+
+	if Input.is_action_just_pressed(\"ui_accept\"):  # Z
+		label.text = \"You help run Laser Chess! She gives you a badge.\"
+		Global.has_council_badge = true
+		interacted = true
+		showing_choices = false
+
+	elif Input.is_action_just_pressed(\"ui_cancel\"):  # X
+		if randf() > 0.5:
+			label.text = \"Bold move. She gives you her Golden Planner!\"
+			Global.has_time_rewind = true
+		else:
+			label.text = \"She rejects you on the campus PA system. Brutal.\"
+			Global.time_penalty(30)
+		interacted = true
+		showing_choices = false
+"
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vj0fs"]
 
 [node name="NPC_Tanya" type="Area2D"]
-script = ExtResource("1_4shar")
+script = SubResource("GDScript_nb1ac")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_3ejfc")
