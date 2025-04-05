@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b436d7y2kqwom"]
+[gd_scene load_steps=16 format=3 uid="uid://b436d7y2kqwom"]
 
 [ext_resource type="Script" uid="uid://b6yav0ax6mvxj" path="res://scripts/Global.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bl8gtsmw3ahjf" path="res://scenes/Player.tscn" id="2_lnu2h"]
@@ -7,8 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://cnpr8h7g586m7" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Houses_TILESET_B-C-D-E.png" id="4_vtaks"]
 [ext_resource type="Texture2D" uid="uid://blvrwhgfli3dt" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png" id="5_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://yyr5tv24fsar" path="res://scenes/npc_tanya.tscn" id="8_0tnpc"]
-[ext_resource type="PackedScene" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://cbphweclp0vy7" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ddai7g0hxjg3w" path="res://scenes/NPC_2Riley.tscn" id="9_vtaks"]
+[ext_resource type="PackedScene" uid="uid://dvjeuhph502wa" path="res://kyle.tscn" id="10_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
 texture = ExtResource("3_0tnpc")
@@ -102,3 +103,5 @@ script = null
 
 [node name="NPC_Croakie" parent="." instance=ExtResource("9_0tnpc")]
 position = Vector2(-181, 67)
+
+[node name="kyle" parent="." instance=ExtResource("10_vtaks")]
