@@ -1,17 +1,12 @@
+[gd_scene load_steps=13 format=3 uid="uid://b436d7y2kqwom"]
 
-[gd_scene load_steps=14 format=3 uid="uid://b436d7y2kqwom"]
-
+[ext_resource type="Script" uid="uid://b6yav0ax6mvxj" path="res://scripts/Global.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bl8gtsmw3ahjf" path="res://scenes/Player.tscn" id="2_lnu2h"]
-[ext_resource type="Texture2D" uid="uid://kn4orwwgbl7i" path="res://Assets/SERENE_VILLAGE_REVAMPED/Construct 3/Autotiles_no_inner_corners_16x16.png" id="3_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://cg2jmb01q3dke" path="res://Assets/SERENE_VILLAGE_REVAMPED/Construct 3/Autotiles_no_inner_corners_16x16.png" id="3_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://du23gci7nfgx7" path="res://scenes/npc_wormwood.tscn" id="3_lbhrr"]
 [ext_resource type="Script" uid="uid://bg531pkdd760" path="res://scripts/npc_wormwood.gd" id="4_iywne"]
-
-[ext_resource type="Texture2D" uid="uid://boxg3t3mgm41y" path="res://Assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="5_iywne"]
-[ext_resource type="PackedScene" uid="uid://ddai7g0hxjg3w" path="res://scenes/NPC_2Riley.tscn" id="6_p57ef"]
-[ext_resource type="PackedScene" uid="uid://yyr5tv24fsar" path="res://scenes/npc_tanya.tscn" id="6_u5sy4"]
-[ext_resource type="PackedScene" uid="uid://5s0udvdx4eqx" path="res://npc_Croakie.tscn" id="7_u5sy4"]
-[ext_resource type="Script" uid="uid://d3rntc0gwxcbx" path="res://scenes/npc_kyle.gd" id="8_gee14"]
-[ext_resource type="Texture2D" uid="uid://dseixbt0aws2h" path="res://Assets/Modern tiles_Free/Characters_free/Adam_idle_16x16.png" id="9_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://cnpr8h7g586m7" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Houses_TILESET_B-C-D-E.png" id="4_vtaks"]
+[ext_resource type="Texture2D" uid="uid://blvrwhgfli3dt" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png" id="5_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
 texture = ExtResource("3_0tnpc")
@@ -69,9 +64,8 @@ sources/3 = SubResource("TileSetAtlasSource_ir15t")
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lnu2h"]
 distance = -158.0
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gee14"]
-
 [node name="Game" type="Node2D"]
+script = ExtResource("1_lbhrr")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(2, 3)
@@ -89,42 +83,11 @@ position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 
 [node name="NPC_Wormwood" parent="." instance=ExtResource("3_lbhrr")]
-<<<<<<< Updated upstream
 position = Vector2(88, 120)
-=======
-position = Vector2(90, 180)
->>>>>>> Stashed changes
 script = ExtResource("4_iywne")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(98, 111)
+position = Vector2(98, 112)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_lnu2h")
-
-[node name="NPC_Riley" parent="." instance=ExtResource("6_p57ef")]
-position = Vector2(4, 93)
-
-[node name="NPC_Tanya" parent="." instance=ExtResource("6_u5sy4")]
-position = Vector2(20, 171)
-
-[node name="NPC_Croakie" parent="." instance=ExtResource("7_u5sy4")]
-position = Vector2(-5, 26)
-
-[node name="NPC_Kyle" type="Area2D" parent="."]
-position = Vector2(34, -3)
-script = ExtResource("8_gee14")
-
-[node name="Sprite2D" type="Sprite2D" parent="NPC_Kyle"]
-texture = ExtResource("9_0tnpc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_Kyle"]
-shape = SubResource("RectangleShape2D_gee14")
-
-[node name="CanvasLayer" type="CanvasLayer" parent="NPC_Kyle"]
-
-[node name="Label" type="Label" parent="NPC_Kyle/CanvasLayer"]
-offset_left = 28.0
-offset_top = 16.0
-offset_right = 51.0
-offset_bottom = 39.0
