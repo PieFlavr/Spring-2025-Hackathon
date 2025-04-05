@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b54dsx57smxhu"
-path="res://.godot/imported/B-C-D-E_Serene_Village_03.png-9d0c3988ce07f53ec4f5a04550548d62.ctex"
+uid="uid://ccyukhnlmpe2"
+path="res://.godot/imported/ButtonBackground.png-c66d4d3993ccbad3bd38e613f530fa8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_VX_ACE/B-C-D-E_Serene_Village_03.png"
-dest_files=["res://.godot/imported/B-C-D-E_Serene_Village_03.png-9d0c3988ce07f53ec4f5a04550548d62.ctex"]
+source_file="res://Assets/UI/ButtonBackground.png"
+dest_files=["res://.godot/imported/ButtonBackground.png-c66d4d3993ccbad3bd38e613f530fa8f.ctex"]
 
 [params]
 

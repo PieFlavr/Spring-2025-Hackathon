@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjo5l4yqokkaf"]
+
+[ext_resource type="Texture2D" uid="uid://tcjgribeuphl" path="res://Assets/UI/MenuBackground.png" id="1_gsp1f"]
+
+[node name="ConversationMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Menu" type="NinePatchRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -209.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_gsp1f")
+patch_margin_left = 3
+patch_margin_top = 3
+patch_margin_right = 3
+patch_margin_bottom = 3
+
+[node name="QuestionText" type="RichTextLabel" parent="Menu"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_right = 772.0
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 32
+text = "This is a sample question."
+
+[node name="OptionButton" type="OptionButton" parent="Menu"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -345.0
+offset_top = -27.0
+offset_right = -76.0
+offset_bottom = 27.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.252028, 0.252028, 0.252028, 0.423529)
