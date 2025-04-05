@@ -1,13 +1,7 @@
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 [gd_scene load_steps=2 format=3 uid="uid://gy2e86t8a2y"]
 
 [ext_resource type="Texture2D" uid="uid://tcjgribeuphl" path="res://Assets/UI/MenuBackground.png" id="1_gsp1f"]
-=======
-[gd_scene load_steps=2 format=3 uid="uid://ddkdv0fannt16"]
-
-[ext_resource type="Texture2D" path="res://Assets/UI/MenuBackground.png" id="1_gsp1f"]
->>>>>>> Stashed changes
 =======
 [gd_scene load_steps=2 format=3 uid="uid://ddkdv0fannt16"]
 
