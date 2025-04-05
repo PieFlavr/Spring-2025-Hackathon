@@ -95,5 +95,3 @@ shape = SubResource("RectangleShape2D_e80uo")
 position = Vector2(6, -2)
 sprite_frames = SubResource("SpriteFrames_3tkgg")
 animation = &"walk_right"
-
-[node name="Camera2D" type="Camera2D" parent="."]
