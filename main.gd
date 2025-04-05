@@ -18,3 +18,5 @@ func game_over():
 
 func _on_npc_wormwood_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
+#func _on_npc_wormwood_body_entered(body: Node2D) -> void:
+	#pass # Replace with function body.
