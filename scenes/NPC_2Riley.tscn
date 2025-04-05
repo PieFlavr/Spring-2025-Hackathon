@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddai7g0hxjg3w"]
+
+[ext_resource type="Script" uid="uid://dk4mvyhnsbsf8" path="res://npc_wormwood.gd" id="1_labtp"]
+[ext_resource type="Texture2D" uid="uid://66epnbje1kjg" path="res://Assets/Bot Wheel/static idle.png" id="2_fvem7"]
+
+[node name="NPC_Riley" type="Area2D"]
+script = ExtResource("1_labtp")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(27, 10)
+scale = Vector2(0.722222, 0.692308)
+texture = ExtResource("2_fvem7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = -16.0
+offset_right = 24.0
+offset_bottom = 23.0

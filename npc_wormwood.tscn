@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bsi6uvpnthj3r"]
+
+[ext_resource type="Script" uid="uid://dk4mvyhnsbsf8" path="res://npc_wormwood.gd" id="1_6miml"]
+[ext_resource type="Texture2D" uid="uid://66epnbje1kjg" path="res://Assets/Bot Wheel/static idle.png" id="2_684ss"]
+
+[node name="NPC_Wormwood" type="Area2D"]
+script = ExtResource("1_6miml")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(62, 1)
+texture = ExtResource("2_684ss")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 23.0

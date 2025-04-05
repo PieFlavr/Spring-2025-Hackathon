@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=3 uid="uid://5s0udvdx4eqx"]
+
+[ext_resource type="Script" uid="uid://chuqutx10pupw" path="res://scripts/npc_riley.gd" id="1_p4ufb"]
+[ext_resource type="Texture2D" uid="uid://66epnbje1kjg" path="res://Assets/Bot Wheel/static idle.png" id="2_fouir"]
+
+[node name="NPC_Croakie" type="Area2D"]
+script = ExtResource("1_p4ufb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(42, 12)
+scale = Vector2(1.14957, 1.42308)
+texture = ExtResource("2_fouir")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = -18.0
+offset_top = -23.0
+offset_right = 16.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
