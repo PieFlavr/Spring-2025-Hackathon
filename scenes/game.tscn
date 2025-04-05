@@ -1,15 +1,173 @@
-[gd_scene load_steps=4 format=3 uid="uid://b436d7y2kqwom"]
+[gd_scene load_steps=9 format=3 uid="uid://b436d7y2kqwom"]
 
-[ext_resource type="Script" uid="uid://bhnuwsv55vyps" path="res://scripts/player.gd" id="1_uwrxv"]
+[ext_resource type="Script" uid="uid://b6yav0ax6mvxj" path="res://scripts/Global.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bl8gtsmw3ahjf" path="res://scenes/Player.tscn" id="2_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://du23gci7nfgx7" path="res://scenes/npc_wormwood.tscn" id="3_lbhrr"]
+[ext_resource type="Script" uid="uid://bg531pkdd760" path="res://scripts/npc_wormwood.gd" id="4_iywne"]
+[ext_resource type="Texture2D" uid="uid://boxg3t3mgm41y" path="res://Assets/Modern tiles_Free/Interiors_free/16x16/Room_Builder_free_16x16.png" id="5_iywne"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lnu2h"]
+distance = -158.0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p57ef"]
+texture = ExtResource("5_iywne")
+5:0/size_in_atlas = Vector2i(1, 2)
+5:0/0 = 0
+6:0/size_in_atlas = Vector2i(1, 2)
+6:0/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+8:0/0 = 0
+8:1/0 = 0
+9:1/0 = 0
+10:1/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/size_in_atlas = Vector2i(1, 2)
+7:2/0 = 0
+8:2/size_in_atlas = Vector2i(1, 2)
+8:2/0 = 0
+9:2/size_in_atlas = Vector2i(1, 2)
+9:2/0 = 0
+11:1/0 = 0
+11:2/0 = 0
+11:3/0 = 0
+12:3/0 = 0
+13:3/0 = 0
+13:2/0 = 0
+13:1/0 = 0
+14:0/0 = 0
+15:0/size_in_atlas = Vector2i(1, 2)
+15:0/0 = 0
+16:0/0 = 0
+16:1/0 = 0
+14:2/size_in_atlas = Vector2i(3, 2)
+14:2/0 = 0
+11:5/size_in_atlas = Vector2i(3, 2)
+11:5/0 = 0
+14:5/0 = 0
+15:5/0 = 0
+16:5/0 = 0
+16:6/0 = 0
+16:7/0 = 0
+16:8/0 = 0
+15:8/0 = 0
+15:7/0 = 0
+14:7/0 = 0
+14:6/0 = 0
+15:6/0 = 0
+14:8/0 = 0
+14:9/0 = 0
+14:10/0 = 0
+14:11/0 = 0
+14:12/0 = 0
+15:12/0 = 0
+16:12/0 = 0
+16:11/0 = 0
+16:10/0 = 0
+16:9/0 = 0
+15:9/0 = 0
+15:10/0 = 0
+15:11/0 = 0
+11:7/size_in_atlas = Vector2i(3, 2)
+11:7/0 = 0
+11:9/size_in_atlas = Vector2i(3, 2)
+11:9/0 = 0
+11:11/size_in_atlas = Vector2i(3, 2)
+11:11/0 = 0
+11:13/size_in_atlas = Vector2i(3, 2)
+11:13/0 = 0
+14:13/size_in_atlas = Vector2i(3, 2)
+14:13/0 = 0
+0:5/size_in_atlas = Vector2i(3, 2)
+0:5/0 = 0
+3:5/size_in_atlas = Vector2i(1, 2)
+3:5/0 = 0
+4:5/size_in_atlas = Vector2i(3, 1)
+4:5/0 = 0
+7:5/size_in_atlas = Vector2i(3, 2)
+7:5/0 = 0
+0:7/size_in_atlas = Vector2i(3, 2)
+0:7/0 = 0
+3:7/size_in_atlas = Vector2i(1, 2)
+3:7/0 = 0
+4:7/size_in_atlas = Vector2i(3, 1)
+4:7/0 = 0
+7:7/size_in_atlas = Vector2i(3, 2)
+7:7/0 = 0
+0:9/size_in_atlas = Vector2i(3, 2)
+0:9/0 = 0
+3:9/size_in_atlas = Vector2i(1, 2)
+3:9/0 = 0
+4:9/size_in_atlas = Vector2i(3, 1)
+4:9/0 = 0
+7:9/size_in_atlas = Vector2i(3, 2)
+7:9/0 = 0
+0:11/size_in_atlas = Vector2i(3, 2)
+0:11/0 = 0
+3:11/size_in_atlas = Vector2i(1, 2)
+3:11/0 = 0
+0:13/size_in_atlas = Vector2i(3, 2)
+0:13/0 = 0
+3:13/size_in_atlas = Vector2i(1, 2)
+3:13/0 = 0
+0:15/size_in_atlas = Vector2i(3, 2)
+0:15/0 = 0
+3:15/size_in_atlas = Vector2i(1, 2)
+3:15/0 = 0
+4:11/size_in_atlas = Vector2i(3, 1)
+4:11/0 = 0
+4:13/size_in_atlas = Vector2i(3, 1)
+4:13/0 = 0
+4:15/size_in_atlas = Vector2i(3, 1)
+4:15/0 = 0
+7:15/size_in_atlas = Vector2i(3, 2)
+7:15/0 = 0
+7:13/size_in_atlas = Vector2i(3, 2)
+7:13/0 = 0
+7:11/size_in_atlas = Vector2i(3, 2)
+7:11/0 = 0
+0:17/size_in_atlas = Vector2i(3, 2)
+0:17/0 = 0
+0:19/size_in_atlas = Vector2i(3, 2)
+0:19/0 = 0
+3:19/size_in_atlas = Vector2i(1, 2)
+3:19/0 = 0
+3:17/size_in_atlas = Vector2i(1, 2)
+3:17/0 = 0
+4:17/size_in_atlas = Vector2i(3, 1)
+4:17/0 = 0
+4:19/size_in_atlas = Vector2i(3, 1)
+4:19/0 = 0
+7:17/size_in_atlas = Vector2i(3, 2)
+7:17/0 = 0
+7:19/size_in_atlas = Vector2i(3, 2)
+7:19/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_u5sy4"]
+sources/0 = SubResource("TileSetAtlasSource_p57ef")
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_uwrxv")
+script = ExtResource("1_lbhrr")
 
 [node name="Player" parent="." instance=ExtResource("2_lnu2h")]
+position = Vector2(97, 52)
 
 [node name="NPC_Wormwood" parent="." instance=ExtResource("3_lbhrr")]
 position = Vector2(86, 114)
+script = ExtResource("4_iywne")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(0, 3)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(98, 112)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_lnu2h")
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(1, 1)
+tile_set = SubResource("TileSet_u5sy4")
+format = 2
+layer_0/tile_data = PackedInt32Array(65547, 983040, 0, 131083, 1048576, 1, 196619, 1048576, 1, 262155, 1048576, 1, 327691, 1048576, 1, 393227, 1048576, 1, 458763, 1048576, 1, 524299, 1048576, 1, 589835, 1048576, 1, 589834, 917504, 2, 589833, 917504, 2, 589832, 917504, 2, 589831, 917504, 2, 589830, 917504, 2, 589829, 917504, 2, 589828, 917504, 2, 589827, 917504, 2, 589826, 917504, 2, 589825, 917504, 2)

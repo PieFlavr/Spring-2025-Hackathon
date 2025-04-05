@@ -1,14 +1,18 @@
-[gd_scene load_steps=2 format=3 uid="uid://du23gci7nfgx7"]
+[gd_scene load_steps=3 format=3 uid="uid://du23gci7nfgx7"]
 
 [ext_resource type="Texture2D" uid="uid://66epnbje1kjg" path="res://Assets/Bot Wheel/static idle.png" id="2_684ss"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_bxnst"]
 
 [node name="NPC_Wormwood" type="Area2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(99, 37)
+position = Vector2(36, -13)
 texture = ExtResource("2_684ss")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10)
+shape = SubResource("CircleShape2D_bxnst")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
