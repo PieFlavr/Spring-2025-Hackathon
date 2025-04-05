@@ -1,23 +1,14 @@
-<<<<<<< Updated upstream
 [gd_scene load_steps=15 format=3 uid="uid://b436d7y2kqwom"]
 
-=======
-[gd_scene load_steps=13 format=3 uid="uid://b436d7y2kqwom"]
-
 [ext_resource type="Script" uid="uid://b6yav0ax6mvxj" path="res://scripts/Global.gd" id="1_lbhrr"]
->>>>>>> Stashed changes
 [ext_resource type="PackedScene" uid="uid://bl8gtsmw3ahjf" path="res://scenes/Player.tscn" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://cg2jmb01q3dke" path="res://Assets/SERENE_VILLAGE_REVAMPED/Construct 3/Autotiles_no_inner_corners_16x16.png" id="3_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://du23gci7nfgx7" path="res://scenes/npc_wormwood.tscn" id="3_lbhrr"]
-[ext_resource type="Script" uid="uid://bg531pkdd760" path="res://scripts/npc_wormwood.gd" id="4_iywne"]
 [ext_resource type="Texture2D" uid="uid://cnpr8h7g586m7" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Houses_TILESET_B-C-D-E.png" id="4_vtaks"]
 [ext_resource type="Texture2D" uid="uid://blvrwhgfli3dt" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png" id="5_kvpfn"]
-<<<<<<< Updated upstream
-[ext_resource type="PackedScene" uid="uid://ddai7g0hxjg3w" path="res://scenes/NPC_2Riley.tscn" id="8_0tnpc"]
-[ext_resource type="PackedScene" uid="uid://yyr5tv24fsar" path="res://scenes/npc_tanya.tscn" id="9_vtaks"]
-[ext_resource type="PackedScene" uid="uid://5s0udvdx4eqx" path="res://npc_Croakie.tscn" id="10_kvpfn"]
-=======
->>>>>>> Stashed changes
+[ext_resource type="PackedScene" uid="uid://cgmv1kkdwaa8" path="res://scenes/npc_tanya.tscn" id="8_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://5s0udvdx4eqx" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://ddai7g0hxjg3w" path="res://scenes/NPC_2Riley.tscn" id="9_vtaks"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
 texture = ExtResource("3_0tnpc")
@@ -94,30 +85,20 @@ position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 
 [node name="NPC_Wormwood" parent="." instance=ExtResource("3_lbhrr")]
-<<<<<<< Updated upstream
-position = Vector2(-102, -114)
-=======
 position = Vector2(88, 120)
->>>>>>> Stashed changes
-script = ExtResource("4_iywne")
+
+[node name="NPC_Tanya" parent="." instance=ExtResource("8_0tnpc")]
+script = null
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(98, 112)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_lnu2h")
-<<<<<<< Updated upstream
 
-[node name="NPC_Riley" parent="." instance=ExtResource("8_0tnpc")]
-position = Vector2(64, -124)
+[node name="NPC_Riley" parent="." instance=ExtResource("9_vtaks")]
+position = Vector2(29, 73)
+script = null
 
-[node name="NPC_Tanya" parent="." instance=ExtResource("9_vtaks")]
-position = Vector2(355, -114)
-
-[node name="NPC_Wormwood2" parent="." instance=ExtResource("3_lbhrr")]
-position = Vector2(-28, -108)
-
-[node name="NPC_Croakie" parent="." instance=ExtResource("10_kvpfn")]
-position = Vector2(230, -117)
-=======
->>>>>>> Stashed changes
+[node name="NPC_Croakie" parent="." instance=ExtResource("9_0tnpc")]
+position = Vector2(-181, 67)

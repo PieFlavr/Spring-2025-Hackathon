@@ -1,10 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://5s0udvdx4eqx"]
 
-[ext_resource type="Script" uid="uid://chuqutx10pupw" path="res://scripts/npc_riley.gd" id="1_p4ufb"]
+[ext_resource type="Script" path="res://scripts/npc_croakie.gd" id="1_cx1pc"]
 [ext_resource type="Texture2D" uid="uid://66epnbje1kjg" path="res://Assets/Bot Wheel/static idle.png" id="2_fouir"]
 
 [node name="NPC_Croakie" type="Area2D"]
-script = ExtResource("1_p4ufb")
+script = ExtResource("1_cx1pc")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(42, 12)
