@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://blpo1gvuiniro"
+=======
+uid="uid://cgk57hjr6g14q"
+>>>>>>> Stashed changes
 path="res://.godot/imported/Room_Builder_free_48x48.png-4c542cf3c4b2f7fe582f6eba58736678.ctex"
 metadata={
 "vram_texture": false

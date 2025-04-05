@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://b3304nuybm20t"
+=======
+uid="uid://xwgx0tv8o0th"
+>>>>>>> Stashed changes
 path="res://.godot/imported/Adam_idle_anim_16x16.png-deac84262a3568daa19ff7ec3db68422.ctex"
 metadata={
 "vram_texture": false

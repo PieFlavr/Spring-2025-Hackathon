@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://d3aisgg6ar7n8"
+=======
+uid="uid://dxtmx0eovsell"
+>>>>>>> Stashed changes
 path="res://.godot/imported/Amelia_run_16x16.png-40a44842a45bd2108c2ccd9f931d0fd4.ctex"
 metadata={
 "vram_texture": false

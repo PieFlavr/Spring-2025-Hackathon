@@ -1,5 +1,98 @@
+<<<<<<< Updated upstream
 [gd_scene format=3 uid="uid://sbvils4abr4b"]
+=======
+[gd_scene load_steps=5 format=3 uid="uid://b65s37tmdl65w"]
+
+[ext_resource type="PackedScene" uid="uid://bl8gtsmw3ahjf" path="res://Player.tscn" id="2_r0du0"]
+[ext_resource type="Texture2D" uid="uid://bmw1yeyamvvje" path="res://Assets/Modern tiles_Free/Interiors_free/16x16/Interiors_free_16x16.png" id="2_uu6xs"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_r0du0"]
+texture = ExtResource("2_uu6xs")
+5:1/size_in_atlas = Vector2i(4, 2)
+5:1/0 = 0
+5:3/size_in_atlas = Vector2i(4, 2)
+5:3/0 = 0
+0:5/size_in_atlas = Vector2i(3, 5)
+0:5/0 = 0
+10:0/size_in_atlas = Vector2i(3, 5)
+10:0/0 = 0
+13:11/size_in_atlas = Vector2i(3, 4)
+13:11/0 = 0
+7:15/size_in_atlas = Vector2i(4, 3)
+7:15/0 = 0
+5:10/size_in_atlas = Vector2i(4, 3)
+5:10/0 = 0
+2:21/size_in_atlas = Vector2i(1, 2)
+2:21/0 = 0
+3:21/size_in_atlas = Vector2i(1, 2)
+3:21/0 = 0
+4:21/size_in_atlas = Vector2i(1, 2)
+4:21/0 = 0
+5:21/size_in_atlas = Vector2i(1, 2)
+5:21/0 = 0
+6:21/size_in_atlas = Vector2i(1, 2)
+6:21/0 = 0
+7:21/size_in_atlas = Vector2i(1, 2)
+7:21/0 = 0
+4:24/size_in_atlas = Vector2i(3, 2)
+4:24/0 = 0
+7:24/size_in_atlas = Vector2i(2, 2)
+7:24/0 = 0
+9:24/size_in_atlas = Vector2i(2, 2)
+9:24/0 = 0
+11:24/size_in_atlas = Vector2i(2, 2)
+11:24/0 = 0
+2:28/size_in_atlas = Vector2i(2, 2)
+2:28/0 = 0
+0:28/size_in_atlas = Vector2i(2, 2)
+0:28/0 = 0
+0:26/size_in_atlas = Vector2i(4, 2)
+0:26/0 = 0
+7:35/size_in_atlas = Vector2i(2, 3)
+7:35/0 = 0
+11:35/size_in_atlas = Vector2i(2, 3)
+11:35/0 = 0
+10:66/size_in_atlas = Vector2i(2, 2)
+10:66/0 = 0
+3:66/size_in_atlas = Vector2i(1, 2)
+3:66/0 = 0
+4:72/size_in_atlas = Vector2i(3, 2)
+4:72/0 = 0
+3:76/size_in_atlas = Vector2i(2, 3)
+3:76/0 = 0
+5:76/size_in_atlas = Vector2i(2, 3)
+5:76/0 = 0
+7:45/size_in_atlas = Vector2i(3, 3)
+7:45/0 = 0
+5:46/size_in_atlas = Vector2i(2, 2)
+5:46/0 = 0
+5:45/size_in_atlas = Vector2i(2, 1)
+5:45/0 = 0
+5:44/0 = 0
+4:44/size_in_atlas = Vector2i(1, 2)
+4:44/0 = 0
+2:44/size_in_atlas = Vector2i(2, 2)
+2:44/0 = 0
+0:45/size_in_atlas = Vector2i(2, 3)
+0:45/0 = 0
+2:46/size_in_atlas = Vector2i(2, 2)
+2:46/0 = 0
+4:46/size_in_atlas = Vector2i(1, 2)
+4:46/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_cm0pq"]
+sources/0 = SubResource("TileSetAtlasSource_r0du0")
+>>>>>>> Stashed changes
 
 [node name="Main" type="Node2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+<<<<<<< Updated upstream
+=======
+position = Vector2(-1, -2)
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2(0, 2)
+tile_set = SubResource("TileSet_cm0pq")
+format = 2
+>>>>>>> Stashed changes
