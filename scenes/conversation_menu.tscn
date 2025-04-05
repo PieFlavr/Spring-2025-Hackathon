@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://gy2e86t8a2y"]
+[gd_scene load_steps=3 format=3 uid="uid://gy2e86t8a2y"]
 
+[ext_resource type="Script" uid="uid://b7882x2p0adas" path="res://scripts/conversation_menu.gd" id="1_2bpyy"]
 [ext_resource type="Texture2D" uid="uid://tcjgribeuphl" path="res://Assets/UI/MenuBackground.png" id="1_gsp1f"]
 
 [node name="ConversationMenu" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_2bpyy")
 
 [node name="Menu" type="NinePatchRect" parent="."]
 layout_mode = 1
