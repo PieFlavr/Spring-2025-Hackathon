@@ -1,10 +1,45 @@
-[gd_scene load_steps=3 format=3 uid="uid://bsi6uvpnthj3r"]
+[gd_scene load_steps=3 format=3 uid="uid://c5fuhvriom030"]
 
-[ext_resource type="Script" uid="uid://dk4mvyhnsbsf8" path="res://npc_wormwood.gd" id="1_6miml"]
 [ext_resource type="Texture2D" uid="uid://66epnbje1kjg" path="res://Assets/Bot Wheel/static idle.png" id="2_684ss"]
 
+[sub_resource type="GDScript" id="GDScript_6miml"]
+script/source = "extends Area2D
+
+var interacted := false
+var showing_choices := false
+@onready var label = $DialogueBox/Label
+
+func _on_body_entered(body):
+	if body.name == \"Player\" and not interacted:
+		show_choices()
+
+func show_choices():
+	showing_choices = true
+	label.text = \"Croak (Z) or Hop Race (X)?\"
+
+func _process(delta):
+	if not showing_choices or interacted:
+		return
+
+	if Input.is_action_just_pressed(\"ui_accept\"):  # Z
+		label.text = \"You croak in sync. Campus Fame +1!\"
+		Global.has_frog_token = true
+		interacted = true
+		showing_choices = false
+
+	elif Input.is_action_just_pressed(\"ui_cancel\"):  # X
+		if randf() > 0.5:
+			label.text = \"You won the hop race! Frog Token earned.\"
+			Global.has_frog_token = true
+		else:
+			label.text = \"You fell in the fountain. Ouch.\"
+			Global.time_penalty(30)
+		interacted = true
+		showing_choices = false
+"
+
 [node name="NPC_Wormwood" type="Area2D"]
-script = ExtResource("1_6miml")
+script = SubResource("GDScript_6miml")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(62, 1)
