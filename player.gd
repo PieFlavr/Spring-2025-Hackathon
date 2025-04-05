@@ -10,8 +10,7 @@ func _physics_process(delta):
 
 	velocity = input_vector * speed
 	move_and_slide()
-
-	# Handle animations
+	
 	var anim_sprite = $AnimatedSprite2D
 
 	if input_vector == Vector2.ZERO:

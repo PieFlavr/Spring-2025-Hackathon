@@ -5,37 +5,37 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e80uo"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpjcp"]
+atlas = ExtResource("2_kpjcp")
+region = Rect2(0, 0, 59, 26)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_kne1u"]
 atlas = ExtResource("2_kpjcp")
-region = Rect2(0, 0, 117, 26)
+region = Rect2(0, 26, 59, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_e80uo"]
 atlas = ExtResource("2_kpjcp")
-region = Rect2(0, 26, 117, 26)
+region = Rect2(0, 52, 59, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cxr5p"]
 atlas = ExtResource("2_kpjcp")
-region = Rect2(0, 52, 117, 26)
+region = Rect2(0, 78, 59, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tdg3f"]
 atlas = ExtResource("2_kpjcp")
-region = Rect2(0, 78, 117, 26)
+region = Rect2(0, 104, 59, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dtqjt"]
 atlas = ExtResource("2_kpjcp")
-region = Rect2(0, 104, 117, 26)
+region = Rect2(0, 130, 59, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5ncpa"]
 atlas = ExtResource("2_kpjcp")
-region = Rect2(0, 130, 117, 26)
+region = Rect2(0, 156, 59, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wi0c6"]
 atlas = ExtResource("2_kpjcp")
-region = Rect2(0, 156, 117, 26)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_hp6x6"]
-atlas = ExtResource("2_kpjcp")
-region = Rect2(0, 182, 117, 26)
+region = Rect2(0, 182, 59, 26)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_3tkgg"]
 animations = [{
@@ -50,6 +50,9 @@ animations = [{
 "speed": 5.0
 }, {
 "frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpjcp")
+}, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kne1u")
 }, {
@@ -70,9 +73,6 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_wi0c6")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_hp6x6")
 }],
 "loop": true,
 "name": &"walk_right",
@@ -91,5 +91,6 @@ script = ExtResource("1_kpjcp")
 shape = SubResource("RectangleShape2D_e80uo")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(6, -2)
 sprite_frames = SubResource("SpriteFrames_3tkgg")
 animation = &"walk_right"
