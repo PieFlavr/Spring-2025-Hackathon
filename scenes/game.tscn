@@ -103,7 +103,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 1.0
 
 [node name="NPC_Wormwood" parent="." instance=ExtResource("3_lbhrr")]
-position = Vector2(86, 114)
+position = Vector2(88, 120)
 script = ExtResource("4_iywne")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
