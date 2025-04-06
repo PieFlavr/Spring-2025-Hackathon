@@ -37,6 +37,7 @@ func _physics_process(delta):
 		anim_sprite.play("dash")
 	elif input_vector == Vector2.ZERO:
 		anim_sprite.stop()
+		anim_sprite.play("idle")
 	else:
 		if abs(input_vector.x) > abs(input_vector.y):
 			anim_sprite.play("walk_right")
