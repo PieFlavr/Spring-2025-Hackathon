@@ -72,8 +72,7 @@ func do_idle_state(prev_state: int, delta: float):
 	transition_animation("idle")
 
 func do_walk_state(prev_state: int, delta: float):
-	if abs(input_vector.x) > abs(input_vector.y):
-		anim_sprite.flip_h = input_vector.x < 0
+	anim_sprite.flip_h = ((input_vector.x < 0) != (input_vector.y < 0))
 	if input_vector.y < 0:
 		transition_animation("walk_up")
 	else:

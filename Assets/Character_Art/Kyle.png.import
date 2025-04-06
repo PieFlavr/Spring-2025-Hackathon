@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dec4ayo5js6t5"
-path="res://.godot/imported/Kyle.png-2fbc3cde41c9e55988fc3b56fc319aa4.ctex"
+path="res://.godot/imported/Kyle.png-6f6234d2c218029853c9b70c9cd422df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Character_Art/Kyle.png"
-dest_files=["res://.godot/imported/Kyle.png-2fbc3cde41c9e55988fc3b56fc319aa4.ctex"]
+source_file="res://assets/Character_Art/Kyle.png"
+dest_files=["res://.godot/imported/Kyle.png-6f6234d2c218029853c9b70c9cd422df.ctex"]
 
 [params]
 
