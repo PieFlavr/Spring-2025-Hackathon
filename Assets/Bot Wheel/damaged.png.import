@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bvyovqgsslh8i"
-path="res://.godot/imported/damaged.png-83b2b640ebb1e98ab5223e10546b619e.ctex"
+path="res://.godot/imported/damaged.png-d607ebfc971f885690bca07f3065d0fd.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Bot Wheel/damaged.png"
-dest_files=["res://.godot/imported/damaged.png-83b2b640ebb1e98ab5223e10546b619e.ctex"]
+source_file="res://Assets/Bot Wheel/damaged.png"
+dest_files=["res://.godot/imported/damaged.png-d607ebfc971f885690bca07f3065d0fd.ctex"]
 
 [params]
 

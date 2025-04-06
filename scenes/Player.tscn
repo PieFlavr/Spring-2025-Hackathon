@@ -1,9 +1,9 @@
 [gd_scene load_steps=27 format=3 uid="uid://bl8gtsmw3ahjf"]
 
 [ext_resource type="Script" uid="uid://bhnuwsv55vyps" path="res://scripts/player.gd" id="1_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://igpdot8m7qsa" path="res://assets/Bot Wheel/GAS dash with FX.png" id="2_3li8b"]
-[ext_resource type="Texture2D" uid="uid://dwjf203sieort" path="res://assets/Bot Wheel/move with FX.png" id="2_kpjcp"]
-[ext_resource type="Texture2D" uid="uid://8gkpgts6a4al" path="res://assets/Bot Wheel/wake.png" id="3_mdl7e"]
+[ext_resource type="Texture2D" uid="uid://igpdot8m7qsa" path="res://Assets/Bot Wheel/GAS dash with FX.png" id="2_3li8b"]
+[ext_resource type="Texture2D" uid="uid://dwjf203sieort" path="res://Assets/Bot Wheel/move with FX.png" id="2_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://8gkpgts6a4al" path="res://Assets/Bot Wheel/wake.png" id="3_mdl7e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v6fml"]
 radius = 8.24621
