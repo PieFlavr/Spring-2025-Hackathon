@@ -35,10 +35,26 @@ patch_margin_bottom = 3
 layout_mode = 1
 anchors_preset = 9
 anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 68.0
 offset_right = 772.0
 grow_vertical = 2
-theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/normal_font_size = 26
 text = "This is a sample question."
+vertical_alignment = 1
+
+[node name="CharacterName" type="RichTextLabel" parent="Menu"]
+layout_mode = 1
+anchors_preset = 9
+anchor_bottom = 1.0
+offset_left = 26.0
+offset_top = 20.0
+offset_right = 772.0
+offset_bottom = -141.0
+grow_vertical = 2
+theme_override_font_sizes/normal_font_size = 33
+text = "This is a character name"
+vertical_alignment = 1
 
 [node name="OptionButton" type="OptionButton" parent="Menu"]
 z_index = 4
