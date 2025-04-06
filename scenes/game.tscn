@@ -124,5 +124,6 @@ position = Vector2(49, 0)
 
 [node name="ConversationMenu" parent="CanvasLayer" instance=ExtResource("11_kvpfn")]
 unique_name_in_owner = true
+z_index = 2
 
 [connection signal="body_entered" from="NPC_Tanya/Area2D2" to="NPC_Tanya/Area2D2" method="_on_body_entered"]

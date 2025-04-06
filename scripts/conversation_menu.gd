@@ -6,6 +6,7 @@ extends Control
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
+	#$CanvasLayer.gui_disable_input = false
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -24,6 +25,9 @@ func displayQuestion(questionList):
 		
 	await option_button.item_selected
 	
+	print("Selected " + str(option_button.selected))
+	
 	visible = false
 	
 	return option_button.selected
+	
