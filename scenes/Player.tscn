@@ -1,8 +1,9 @@
-[gd_scene load_steps=21 format=3 uid="uid://bl8gtsmw3ahjf"]
+[gd_scene load_steps=27 format=3 uid="uid://bl8gtsmw3ahjf"]
 
 [ext_resource type="Script" uid="uid://bhnuwsv55vyps" path="res://scripts/player.gd" id="1_kpjcp"]
 [ext_resource type="Texture2D" uid="uid://igpdot8m7qsa" path="res://Assets/Bot Wheel/GAS dash with FX.png" id="2_3li8b"]
 [ext_resource type="Texture2D" uid="uid://dwjf203sieort" path="res://Assets/Bot Wheel/move with FX.png" id="2_kpjcp"]
+[ext_resource type="Texture2D" uid="uid://8gkpgts6a4al" path="res://Assets/Bot Wheel/wake.png" id="3_mdl7e"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_v6fml"]
 radius = 8.24621
@@ -34,6 +35,26 @@ region = Rect2(0, 130, 117, 26)
 [sub_resource type="AtlasTexture" id="AtlasTexture_bruh7"]
 atlas = ExtResource("2_3li8b")
 region = Rect2(0, 156, 117, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6eyey"]
+atlas = ExtResource("3_mdl7e")
+region = Rect2(0, 0, 59, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d3wef"]
+atlas = ExtResource("3_mdl7e")
+region = Rect2(0, 26, 59, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4126"]
+atlas = ExtResource("3_mdl7e")
+region = Rect2(0, 52, 59, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lkdrv"]
+atlas = ExtResource("3_mdl7e")
+region = Rect2(0, 78, 59, 26)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p7iby"]
+atlas = ExtResource("3_mdl7e")
+region = Rect2(0, 104, 59, 26)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpjcp"]
 atlas = ExtResource("2_kpjcp")
@@ -95,10 +116,25 @@ animations = [{
 "name": &"dash",
 "speed": 8.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6eyey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d3wef")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4126")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lkdrv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p7iby")
+}],
 "loop": true,
 "name": &"idle",
-"speed": 5.0
+"speed": 8.0
 }, {
 "frames": [],
 "loop": true,
@@ -157,3 +193,4 @@ position = Vector2(7, -13)
 sprite_frames = SubResource("SpriteFrames_3tkgg")
 animation = &"idle"
 autoplay = "walk_right"
+frame_progress = 0.125461
