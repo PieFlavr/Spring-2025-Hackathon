@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cjrvn3xur7cwf"
-path="res://.godot/imported/water_waves_32x32.png-2445aae8d715820afd62a3c3239f5832.ctex"
+path="res://.godot/imported/water_waves_32x32.png-e061072c398c262afbea05702c9beb73.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SERENE_VILLAGE_REVAMPED/Animated stuff/water_waves_32x32.png"
-dest_files=["res://.godot/imported/water_waves_32x32.png-2445aae8d715820afd62a3c3239f5832.ctex"]
+source_file="res://assets/SERENE_VILLAGE_REVAMPED/Animated stuff/water_waves_32x32.png"
+dest_files=["res://.godot/imported/water_waves_32x32.png-e061072c398c262afbea05702c9beb73.ctex"]
 
 [params]
 

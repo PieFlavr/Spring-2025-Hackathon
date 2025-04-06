@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_14"
+type="Resource"
+uid="uid://cpotxmkcwc2yv"
+path="res://.godot/imported/croakie.dialogue-7a2fa37de7c7dfe1dccf20192e77c744.tres"
+
+[deps]
+
+source_file="res://dialogue/croakie.dialogue"
+dest_files=["res://.godot/imported/croakie.dialogue-7a2fa37de7c7dfe1dccf20192e77c744.tres"]
+
+[params]
+
+defaults=true

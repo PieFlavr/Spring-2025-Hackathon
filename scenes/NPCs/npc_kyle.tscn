@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bco7b1u8m6kfm"]
+
+[ext_resource type="Texture2D" uid="uid://cwq1txger34v7" path="res://assets/Modern tiles_Free/Old/idle_16x16_2.png" id="1_k6x3c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lk06v"]
+size = Vector2(14, 19)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ruht3"]
+atlas = ExtResource("1_k6x3c")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b6kcs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ruht3")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="npc_Kyle" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -10.5)
+shape = SubResource("RectangleShape2D_lk06v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_b6kcs")
+animation = &"idle"

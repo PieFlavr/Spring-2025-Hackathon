@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://du23gci7nfgx7"]
+
+[ext_resource type="Texture2D" uid="uid://bflcpg4ywp1v" path="res://assets/Modern tiles_Free/Characters_free/Bob_idle_16x16.png" id="2_whjrs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xsodj"]
+size = Vector2(14, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45q11"]
+atlas = ExtResource("2_whjrs")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qlpcn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45q11")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="NPC_Wormwood" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_xsodj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+visible = false
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -15)
+sprite_frames = SubResource("SpriteFrames_qlpcn")
