@@ -1,17 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbphweclp0vy7"]
+[gd_scene load_steps=6 format=3 uid="uid://cbphweclp0vy7"]
 
 [ext_resource type="Script" uid="uid://bojxeherkgj64" path="res://scripts/npc_croakie.gd" id="1_cx1pc"]
-[ext_resource type="Texture2D" uid="uid://66epnbje1kjg" path="res://Assets/Bot Wheel/static idle.png" id="2_fouir"]
+[ext_resource type="Texture2D" uid="uid://dsirqgt1lt43s" path="res://Assets/Modern tiles_Free/Characters_free/Amelia_idle_16x16.png" id="2_cx1pc"]
 
-[node name="NPC_Croakie" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ctys0"]
+size = Vector2(14, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4106k"]
+atlas = ExtResource("2_cx1pc")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t6xhn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4106k")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="NPC_Croakie" type="CharacterBody2D"]
 script = ExtResource("1_cx1pc")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(42, 12)
-scale = Vector2(1.14957, 1.42308)
-texture = ExtResource("2_fouir")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_ctys0")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -20,4 +35,6 @@ offset_left = -18.0
 offset_top = -23.0
 offset_right = 16.0
 
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_t6xhn")
