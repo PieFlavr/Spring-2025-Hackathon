@@ -189,8 +189,6 @@ shape = SubResource("CircleShape2D_kvuet")
 [node name="ConversationMenu" parent="CanvasLayer" instance=ExtResource("11_kvpfn")]
 unique_name_in_owner = true
 z_index = 2
-offset_left = -4.0
-offset_right = -4.0
 
 [node name="NpcRiley" parent="." instance=ExtResource("16_rysoc")]
 position = Vector2(-74, 140)
