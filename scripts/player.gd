@@ -17,6 +17,10 @@ func _physics_process(delta):
 		anim_sprite.stop()
 	else:
 		if abs(input_vector.x) > abs(input_vector.y):
-			anim_sprite.play("walk_right" if input_vector.x > 0 else "walk_left")
+			anim_sprite.play("walk_right")
+			if input_vector.x > 0:
+				anim_sprite.flip_h = false
+			else:
+				anim_sprite.flip_h = true
 		else:
 			anim_sprite.play("walk_down" if input_vector.y > 0 else "walk_up")

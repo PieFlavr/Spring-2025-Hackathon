@@ -96,4 +96,3 @@ position = Vector2(7, -13)
 sprite_frames = SubResource("SpriteFrames_3tkgg")
 animation = &"walk_right"
 autoplay = "walk_right"
-frame_progress = 0.254023
