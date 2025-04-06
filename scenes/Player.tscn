@@ -192,5 +192,4 @@ shape = SubResource("CircleShape2D_v6fml")
 position = Vector2(7, -13)
 sprite_frames = SubResource("SpriteFrames_3tkgg")
 animation = &"idle"
-autoplay = "walk_right"
-frame_progress = 0.125461
+autoplay = "idle"
