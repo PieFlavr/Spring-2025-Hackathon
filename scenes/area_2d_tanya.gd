@@ -11,5 +11,8 @@ func _on_body_entered(body: Node2D) -> void:
 
 
 
-func _on_body_shape_exited(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
-	conversation_menu.visible = false
+
+
+func _on_body_exited(body: Node2D) -> void:
+	conversation_menu.closeMenu()
+	print("Now closing menu")

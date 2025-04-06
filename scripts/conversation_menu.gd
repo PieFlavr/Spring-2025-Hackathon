@@ -31,3 +31,6 @@ func displayQuestion(questionList):
 	
 	return option_button.selected
 	
+func closeMenu():
+	visible = false
+	
