@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://w4y5oib5vukd"
-path="res://.godot/imported/Riley.png-97844203936cfcafe4e4efe59aacb73b.ctex"
+path="res://.godot/imported/Riley.png-e4c99f31156fd9e01f6b44d56d57aad7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Character_Art/Riley.png"
-dest_files=["res://.godot/imported/Riley.png-97844203936cfcafe4e4efe59aacb73b.ctex"]
+source_file="res://Assets/Character_Art/Riley.png"
+dest_files=["res://.godot/imported/Riley.png-e4c99f31156fd9e01f6b44d56d57aad7.ctex"]
 
 [params]
 
