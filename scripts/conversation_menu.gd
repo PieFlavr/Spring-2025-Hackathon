@@ -1,4 +1,3 @@
-
 extends Control
 
 @onready var option_button: OptionButton = $Menu/OptionButton
@@ -12,12 +11,6 @@ signal unlock_controls
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
-	#$CanvasLayer.gui_disable_input = false
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 
 func displayText(text, characterName):
 	visible = true
@@ -25,23 +18,10 @@ func displayText(text, characterName):
 	question_text.text = text
 	character_name.text = characterName + ":"
 	
-	if characterName == "Croakie":
-		character_texture.texture = load("res://Assets/Character_Art/Croakie.png")
-	elif characterName == "Kyle":
-		character_texture.texture = load("res://Assets/Character_Art/Kyle.png")
-	elif characterName == "Riley":
-		character_texture.texture = load("res://Assets/Character_Art/Riley.png")
-	elif characterName == "Tanya":
-		character_texture.texture = load("res://Assets/Character_Art/Tanya.png")
-	elif characterName == "Wormwood":
-		character_texture.texture = load("res://Assets/Character_Art/Wormwood.png")
-	else:
-		character_texture.visible = false
+	load_character(characterName)
 	
 	option_button.clear()
 	option_button.visible = false
-
-
 
 func displayQuestion(question, answerList, characterName):
 	
@@ -49,22 +29,10 @@ func displayQuestion(question, answerList, characterName):
 	option_button.visible = true
 	lock_controls.emit()
 	
-	
 	question_text.text = question
 	character_name.text = characterName + ":"
 	
-	if characterName == "Croakie":
-		character_texture.texture = load("res://Assets/Character_Art/Croakie.png")
-	elif characterName == "Kyle":
-		character_texture.texture = load("res://Assets/Character_Art/Kyle.png")
-	elif characterName == "Riley":
-		character_texture.texture = load("res://Assets/Character_Art/Riley.png")
-	elif characterName == "Tanya":
-		character_texture.texture = load("res://Assets/Character_Art/Tanya.png")
-	elif characterName == "Wormwood":
-		character_texture.texture = load("res://Assets/Character_Art/Wormwood.png")
-	else:
-		character_texture.visible = false
+	load_character(characterName)
 	
 	option_button.clear()
 	var index = 0
@@ -84,3 +52,18 @@ func displayQuestion(question, answerList, characterName):
 func closeMenu():
 	visible = false
 	
+# just for easier encapsulation
+func load_character(character_name: String):
+	match character_name:
+		"Croakie":
+			character_texture.texture = load("res://Assets/Character_Art/Croakie.png")
+		"Kyle":
+			character_texture.texture = load("res://Assets/Character_Art/Kyle.png")
+		"Riley":
+			character_texture.texture = load("res://Assets/Character_Art/Riley.png")
+		"Tanya":
+			character_texture.texture = load("res://Assets/Character_Art/Tanya.png")
+		"Wormwood":
+			character_texture.texture = load("res://Assets/Character_Art/Wormwood.png")
+		_:
+			character_texture.visible = false
