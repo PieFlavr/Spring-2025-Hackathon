@@ -8,10 +8,10 @@
 [ext_resource type="Texture2D" uid="uid://blvrwhgfli3dt" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png" id="5_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://dt3nands3r7xw" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Terrains_TILESET_B-C-D-E.png" id="6_dinhu"]
 [ext_resource type="PackedScene" uid="uid://yyr5tv24fsar" path="res://scenes/npc_tanya.tscn" id="8_0tnpc"]
-[ext_resource type="Script" path="res://scenes/area_2d_tanya.gd" id="8_dinhu"]
-[ext_resource type="PackedScene" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
+[ext_resource type="Script" uid="uid://clqysyuokik4y" path="res://scenes/area_2d_tanya.gd" id="8_dinhu"]
+[ext_resource type="PackedScene" uid="uid://cbphweclp0vy7" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ddai7g0hxjg3w" path="res://scenes/NPC_2Riley.tscn" id="9_vtaks"]
-[ext_resource type="PackedScene" path="res://kyle.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://dvjeuhph502wa" path="res://kyle.tscn" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://gy2e86t8a2y" path="res://scenes/conversation_menu.tscn" id="11_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
