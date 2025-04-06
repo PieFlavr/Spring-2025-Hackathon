@@ -142,6 +142,14 @@ script = ExtResource("8_ssvqc")
 position = Vector2(0, -11)
 shape = SubResource("CircleShape2D_kvuet")
 
+[node name="Label" type="Label" parent="NPC_Wormwood"]
+offset_left = -17.0
+offset_top = -38.0
+offset_right = 151.0
+offset_bottom = 26.0
+scale = Vector2(0.221257, 0.346853)
+text = "Professor Warmwood
+"
 [node name="NPC_Tanya" parent="." instance=ExtResource("8_0tnpc")]
 position = Vector2(-48, 0)
 script = null
@@ -179,6 +187,8 @@ shape = SubResource("CircleShape2D_kvuet")
 [node name="ConversationMenu" parent="CanvasLayer" instance=ExtResource("11_kvpfn")]
 unique_name_in_owner = true
 z_index = 2
+offset_left = -4.0
+offset_right = -4.0
 
 [node name="NpcRiley" parent="." instance=ExtResource("16_rysoc")]
 position = Vector2(-74, 140)
