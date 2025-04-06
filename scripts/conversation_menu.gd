@@ -14,10 +14,34 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	pass
+
+func displayText(text, characterName):
+	visible = true
 	
+	question_text.text = text
+	
+	if characterName == "Croakie":
+		character_texture.texture = load("res://Assets/Character_Art/Croakie.png")
+	elif characterName == "Kyle":
+		character_texture.texture = load("res://Assets/Character_Art/Kyle.png")
+	elif characterName == "Riley":
+		character_texture.texture = load("res://Assets/Character_Art/Riley.png")
+	elif characterName == "Tanya":
+		character_texture.texture = load("res://Assets/Character_Art/Tanya.png")
+	elif characterName == "Wormwood":
+		character_texture.texture = load("res://Assets/Character_Art/Wormwood.png")
+	else:
+		character_texture.visible = false
+	
+	option_button.clear()
+	option_button.visible = false
+
+
+
 func displayQuestion(question, answerList, characterName):
 	
 	visible = true
+	option_button.visible = true
 	
 	question_text.text = question
 	
