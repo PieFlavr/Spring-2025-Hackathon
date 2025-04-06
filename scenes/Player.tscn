@@ -136,16 +136,6 @@ animations = [{
 "name": &"idle",
 "speed": 8.0
 }, {
-"frames": [],
-"loop": true,
-"name": &"walk_down",
-"speed": 5.0
-}, {
-"frames": [],
-"loop": true,
-"name": &"walk_left",
-"speed": 5.0
-}, {
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_kpjcp")
@@ -172,8 +162,13 @@ animations = [{
 "texture": SubResource("AtlasTexture_wi0c6")
 }],
 "loop": true,
-"name": &"walk_right",
+"name": &"walk",
 "speed": 10.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"walk_down",
+"speed": 5.0
 }, {
 "frames": [],
 "loop": true,
@@ -191,5 +186,5 @@ shape = SubResource("CircleShape2D_v6fml")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(7, -13)
 sprite_frames = SubResource("SpriteFrames_3tkgg")
-animation = &"idle"
+animation = &"walk"
 autoplay = "idle"
