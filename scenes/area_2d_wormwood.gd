@@ -34,7 +34,7 @@ func _on_body_entered(body: Node2D) -> void:
 		elif response == 1:
 			if randf() > 0.5:
 				conversation_menu.displayText("You failed the debate. Lost time!", "Wormwood")
-				Global.time_penalty(60)
+				#Global.time_penalty(60)
 			else:
 				conversation_menu.displayText("You won the debate! You gain wisdom.", "Wormwood")
 				Global.has_map = true

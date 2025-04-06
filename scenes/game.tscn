@@ -148,8 +148,10 @@ offset_top = -38.0
 offset_right = 151.0
 offset_bottom = 26.0
 scale = Vector2(0.221257, 0.346853)
+theme_override_font_sizes/font_size = 0
 text = "Professor Warmwood
 "
+
 [node name="NPC_Tanya" parent="." instance=ExtResource("8_0tnpc")]
 position = Vector2(-48, 0)
 script = null

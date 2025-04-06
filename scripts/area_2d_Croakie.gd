@@ -36,7 +36,7 @@ func _on_body_entered(body: Node2D) -> void:
 				Global.has_frog_token = true
 			else:
 				conversation_menu.displayText("You fell in the fountain. Ouch.", "Croakie")
-				Global.time_penalty(30)
+				#Global.time_penalty(30)
 		interacted = true
 
 func _on_body_exited(body: Node2D) -> void:

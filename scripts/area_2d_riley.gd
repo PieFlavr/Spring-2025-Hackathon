@@ -38,7 +38,7 @@ func _on_body_entered(body: Node2D) -> void:
 				Global.has_art_token = true
 			else:
 				conversation_menu.displayText("Yikes, spilled ink everywhere. Riley is not impressed.", "Riley")
-				Global.time_penalty(30)
+				#Global.time_penalty(30)
 		interacted = true
 
 func _on_body_exited(body: Node2D) -> void:

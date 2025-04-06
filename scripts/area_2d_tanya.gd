@@ -50,7 +50,7 @@ func _process(_delta: float) -> void:
 			Global.has_time_rewind = true
 		else:
 			conversation_menu.set_text("She rejects you on the campus PA system. Brutal.")
-			Global.time_penalty(30)
+			#Global.time_penalty(30)
 		interacted = true
 
 func _on_body_exited(body: Node2D) -> void:
