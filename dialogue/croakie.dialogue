@@ -1,0 +1,11 @@
+~ start
+Croakie: [[Hi|Hello|Howdy]], this is some dialogue.
+Croakie: Here are some choices.
+- First one
+	Croakie: You picked the first one.
+- Second one
+	Croakie: You picked the second one.
+- Start again => start
+- End the conversation => END
+Croakie: For more information see the online documentation.
+=> END
