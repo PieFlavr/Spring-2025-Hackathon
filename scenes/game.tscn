@@ -15,9 +15,9 @@
 [ext_resource type="Script" uid="uid://br276joenxyhl" path="res://scripts/area_2d_riley.gd" id="11_ca42v"]
 [ext_resource type="PackedScene" uid="uid://gy2e86t8a2y" path="res://scenes/conversation_menu.tscn" id="11_kvpfn"]
 [ext_resource type="Script" uid="uid://c7erfg1pchow" path="res://scripts/area_2d_Croakie.gd" id="13_rysoc"]
-[ext_resource type="Script" uid="uid://75gweortm77b" path="res://scripts/area_2d_kyle.gd" id="15_ssvqc"]
+[ext_resource type="Script" path="res://scripts/area_2d_kyle.gd" id="15_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://xf2b23k3n76w" path="res://scenes/NPC_Riley.tscn" id="16_rysoc"]
-[ext_resource type="PackedScene" uid="uid://bco7b1u8m6kfm" path="res://scenes/npc_kyle.tscn" id="18_ssvqc"]
+[ext_resource type="PackedScene" path="res://scenes/npc_kyle.tscn" id="18_ssvqc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
 texture = ExtResource("3_0tnpc")
@@ -150,6 +150,7 @@ offset_bottom = 26.0
 scale = Vector2(0.221257, 0.346853)
 text = "Professor Warmwood
 "
+
 [node name="NPC_Tanya" parent="." instance=ExtResource("8_0tnpc")]
 position = Vector2(-48, 0)
 script = null
