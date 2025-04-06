@@ -1,23 +1,38 @@
-[gd_scene load_steps=4 format=3 uid="uid://yyr5tv24fsar"]
+[gd_scene load_steps=6 format=3 uid="uid://yyr5tv24fsar"]
 
 [ext_resource type="Texture2D" uid="uid://dbvhx078t2jw" path="res://Assets/Modern tiles_Free/Characters_free/Alex_idle_16x16.png" id="1_3ejfc"]
-[ext_resource type="Script" path="res://scripts/npc_tanya.gd" id="1_4shar"]
+[ext_resource type="Script" uid="uid://dt44emut50ly0" path="res://scripts/npc_tanya.gd" id="1_4shar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vj0fs"]
+size = Vector2(12, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4shar"]
+atlas = ExtResource("1_3ejfc")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kb42r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4shar")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
 
 [node name="NPC_Tanya" type="Area2D"]
 script = ExtResource("1_4shar")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("1_3ejfc")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1, 0)
+position = Vector2(0, -11)
 shape = SubResource("RectangleShape2D_vj0fs")
 
 [node name="DialogueBox" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="Label" type="Label" parent="DialogueBox"]
+visible = false
 anchors_preset = -1
 anchor_left = 0.065
 anchor_top = 0.042
@@ -28,3 +43,8 @@ offset_top = -74.216
 offset_right = -22.88
 offset_bottom = -51.216
 text = "this is tanya"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_kb42r")
+animation = &"idle"
