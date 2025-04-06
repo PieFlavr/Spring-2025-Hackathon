@@ -11,12 +11,12 @@
 [ext_resource type="Script" uid="uid://clqysyuokik4y" path="res://scripts/area_2d_tanya.gd" id="8_dinhu"]
 [ext_resource type="PackedScene" uid="uid://cbphweclp0vy7" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ddai7g0hxjg3w" path="res://scenes/NPC_2Riley.tscn" id="9_vtaks"]
-[ext_resource type="PackedScene" uid="uid://dvjeuhph502wa" path="res://kyle.tscn" id="10_vtaks"]
 [ext_resource type="Script" uid="uid://br276joenxyhl" path="res://scripts/area_2d_riley.gd" id="11_ca42v"]
 [ext_resource type="PackedScene" uid="uid://gy2e86t8a2y" path="res://scenes/conversation_menu.tscn" id="11_kvpfn"]
 [ext_resource type="Script" uid="uid://c7erfg1pchow" path="res://scripts/area_2d_Croakie.gd" id="13_rysoc"]
 [ext_resource type="Script" uid="uid://75gweortm77b" path="res://scripts/area_2d_kyle.gd" id="15_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://xf2b23k3n76w" path="res://scenes/NPC_Riley.tscn" id="16_rysoc"]
+[ext_resource type="PackedScene" uid="uid://bco7b1u8m6kfm" path="res://scenes/npc_kyle.tscn" id="18_ssvqc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
 texture = ExtResource("3_0tnpc")
@@ -165,16 +165,6 @@ script = ExtResource("13_rysoc")
 position = Vector2(0, -11)
 shape = SubResource("CircleShape2D_kvuet")
 
-[node name="kyle" parent="." instance=ExtResource("10_vtaks")]
-position = Vector2(49, 0)
-
-[node name="Area2D2" type="Area2D" parent="kyle"]
-script = ExtResource("15_ssvqc")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="kyle/Area2D2"]
-position = Vector2(0, -11)
-shape = SubResource("CircleShape2D_kvuet")
-
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="ConversationMenu" parent="CanvasLayer" instance=ExtResource("11_kvpfn")]
@@ -192,15 +182,26 @@ script = ExtResource("11_ca42v")
 position = Vector2(-103, 72)
 shape = SubResource("CircleShape2D_rysoc")
 
+[node name="npc_Kyle" parent="." instance=ExtResource("18_ssvqc")]
+position = Vector2(-237, -91)
+
+[node name="Area2D2" type="Area2D" parent="npc_Kyle"]
+position = Vector2(103, -67)
+script = ExtResource("15_ssvqc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="npc_Kyle/Area2D2"]
+position = Vector2(-103, 57)
+shape = SubResource("CircleShape2D_rysoc")
+
 [connection signal="body_entered" from="NPC_Tanya/Area2D2" to="NPC_Tanya/Area2D2" method="_on_body_entered"]
 [connection signal="body_exited" from="NPC_Tanya/Area2D2" to="." method="_on_area_2d_2_body_exited"]
 [connection signal="body_exited" from="NPC_Tanya/Area2D2" to="NPC_Tanya/Area2D2" method="_on_body_exited"]
 [connection signal="body_entered" from="NPC_Croakie/Area2D2" to="NPC_Croakie/Area2D2" method="_on_body_entered"]
 [connection signal="body_exited" from="NPC_Croakie/Area2D2" to="." method="_on_area_2d_2_body_exited"]
 [connection signal="body_exited" from="NPC_Croakie/Area2D2" to="NPC_Croakie/Area2D2" method="_on_body_exited"]
-[connection signal="body_entered" from="kyle/Area2D2" to="kyle/Area2D2" method="_on_body_entered"]
-[connection signal="body_exited" from="kyle/Area2D2" to="." method="_on_area_2d_2_body_exited"]
-[connection signal="body_exited" from="kyle/Area2D2" to="kyle/Area2D2" method="_on_body_exited"]
 [connection signal="body_entered" from="NpcRiley/Area2D2" to="NpcRiley/Area2D2" method="_on_body_entered"]
 [connection signal="body_exited" from="NpcRiley/Area2D2" to="." method="_on_area_2d_2_body_exited"]
 [connection signal="body_exited" from="NpcRiley/Area2D2" to="NpcRiley/Area2D2" method="_on_body_exited"]
+[connection signal="body_entered" from="npc_Kyle/Area2D2" to="npc_Kyle/Area2D2" method="_on_body_entered"]
+[connection signal="body_exited" from="npc_Kyle/Area2D2" to="." method="_on_area_2d_2_body_exited"]
+[connection signal="body_exited" from="npc_Kyle/Area2D2" to="npc_Kyle/Area2D2" method="_on_body_exited"]
