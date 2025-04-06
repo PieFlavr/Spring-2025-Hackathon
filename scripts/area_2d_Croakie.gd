@@ -4,7 +4,7 @@ extends Area2D
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		conversation_menu.displayQuestion(["Two", "Three"], "Croakie")
+		conversation_menu.displayQuestion("Test croakie", ["Two", "Three"], "Croakie")
 		
 
 
