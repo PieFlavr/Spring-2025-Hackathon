@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dt3nands3r7xw" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Terrains_TILESET_B-C-D-E.png" id="6_dinhu"]
 [ext_resource type="PackedScene" uid="uid://yyr5tv24fsar" path="res://scenes/npc_tanya.tscn" id="8_0tnpc"]
 [ext_resource type="Script" path="res://scenes/area_2d_tanya.gd" id="8_dinhu"]
-[ext_resource type="PackedScene" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
+[ext_resource type="PackedScene" uid="uid://cbphweclp0vy7" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ddai7g0hxjg3w" path="res://scenes/NPC_2Riley.tscn" id="9_vtaks"]
 [ext_resource type="PackedScene" path="res://kyle.tscn" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://gy2e86t8a2y" path="res://scenes/conversation_menu.tscn" id="11_kvpfn"]
@@ -115,12 +115,13 @@ layer_0/tile_data = PackedInt32Array(-2228225, 1572870, 13, -1835017, 262150, 0,
 
 [node name="Player" parent="." instance=ExtResource("2_lnu2h")]
 z_index = 5
-position = Vector2(97, 52)
+position = Vector2(22, -28)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-97, -49)
+position = Vector2(0, 1)
+zoom = Vector2(2, 2)
 position_smoothing_enabled = true
-position_smoothing_speed = 1.0
+position_smoothing_speed = 3.0
 
 [node name="NPC_Wormwood" parent="." instance=ExtResource("3_lbhrr")]
 position = Vector2(88, 120)
@@ -153,6 +154,7 @@ position = Vector2(-181, 67)
 position = Vector2(49, 0)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+visible = false
 
 [node name="ConversationMenu" parent="CanvasLayer" instance=ExtResource("11_kvpfn")]
 unique_name_in_owner = true
