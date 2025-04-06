@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ddai7g0hxjg3w"]
 
-[ext_resource type="Script" path="res://scripts/npc_riley.gd" id="1_huyr7"]
+[ext_resource type="Script" uid="uid://chuqutx10pupw" path="res://scripts/npc_riley.gd" id="1_huyr7"]
 [ext_resource type="Texture2D" uid="uid://66epnbje1kjg" path="res://Assets/Bot Wheel/static idle.png" id="2_fvem7"]
 
 [node name="NPC_Riley" type="Area2D"]
