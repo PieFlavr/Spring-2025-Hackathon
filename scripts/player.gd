@@ -10,6 +10,8 @@ var can_dash = true
 var dash_timer = 0.0
 var dash_direction = Vector2.ZERO
 
+var can_move = 1
+
 func _physics_process(delta):
 	var input_vector = Vector2(
 		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
@@ -23,7 +25,7 @@ func _physics_process(delta):
 		if dash_timer <= 0:
 			is_dashing = false
 	else:
-		velocity = input_vector * speed
+		velocity = input_vector * speed * can_move
 		if Input.is_action_just_pressed("dash") and can_dash and input_vector != Vector2.ZERO:
 			start_dash(input_vector)
 
@@ -39,11 +41,12 @@ func _physics_process(delta):
 		anim_sprite.stop()
 		anim_sprite.play("idle")
 	else:
-		if abs(input_vector.x) > abs(input_vector.y):
-			anim_sprite.play("walk_right")
-			anim_sprite.flip_h = input_vector.x < 0
-		else:
-			anim_sprite.play("walk_down" if input_vector.y > 0 else "walk_up")
+		if can_move:
+			if abs(input_vector.x) > abs(input_vector.y):
+				anim_sprite.play("walk_right")
+				anim_sprite.flip_h = input_vector.x < 0
+			else:
+				anim_sprite.play("walk_down" if input_vector.y > 0 else "walk_up")
 
 func start_dash(direction: Vector2):
 	is_dashing = true
@@ -54,3 +57,12 @@ func start_dash(direction: Vector2):
 	# Start cooldown as a timer using coroutine
 	await get_tree().create_timer(dash_cooldown).timeout
 	can_dash = true
+
+
+
+func _on_conversation_menu_lock_controls() -> void:
+	can_move = 0
+	
+
+func _on_conversation_menu_unlock_controls() -> void:
+	can_move = 1

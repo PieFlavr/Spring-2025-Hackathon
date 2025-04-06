@@ -6,6 +6,9 @@ extends Control
 @onready var question_text: RichTextLabel = $Menu/QuestionText
 @onready var character_name: RichTextLabel = $Menu/CharacterName
 
+signal lock_controls
+signal unlock_controls
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	visible = false
@@ -44,6 +47,8 @@ func displayQuestion(question, answerList, characterName):
 	
 	visible = true
 	option_button.visible = true
+	lock_controls.emit()
+	
 	
 	question_text.text = question
 	character_name.text = characterName + ":"
@@ -71,6 +76,7 @@ func displayQuestion(question, answerList, characterName):
 	
 	print("Selected " + str(option_button.selected))
 	
+	unlock_controls.emit()
 	visible = false
 	
 	return option_button.selected
