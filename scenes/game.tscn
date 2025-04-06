@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://b436d7y2kqwom"]
+[gd_scene load_steps=27 format=3 uid="uid://b436d7y2kqwom"]
 
 [ext_resource type="Script" uid="uid://b6yav0ax6mvxj" path="res://scripts/Global.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bl8gtsmw3ahjf" path="res://scenes/Player.tscn" id="2_lnu2h"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dt3nands3r7xw" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Terrains_TILESET_B-C-D-E.png" id="6_dinhu"]
 [ext_resource type="PackedScene" uid="uid://yyr5tv24fsar" path="res://scenes/npc_tanya.tscn" id="8_0tnpc"]
 [ext_resource type="Script" uid="uid://clqysyuokik4y" path="res://scripts/area_2d_tanya.gd" id="8_dinhu"]
+[ext_resource type="Script" uid="uid://ceikfhcfb4bsc" path="res://scenes/area_2d_wormwood.gd" id="8_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://cbphweclp0vy7" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ddai7g0hxjg3w" path="res://scenes/NPC_2Riley.tscn" id="9_vtaks"]
 [ext_resource type="Script" uid="uid://br276joenxyhl" path="res://scripts/area_2d_riley.gd" id="11_ca42v"]
@@ -132,6 +133,14 @@ position_smoothing_speed = 3.0
 
 [node name="NPC_Wormwood" parent="." instance=ExtResource("3_lbhrr")]
 position = Vector2(88, 120)
+script = null
+
+[node name="Area2D2" type="Area2D" parent="NPC_Wormwood"]
+script = ExtResource("8_ssvqc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_Wormwood/Area2D2"]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_kvuet")
 
 [node name="NPC_Tanya" parent="." instance=ExtResource("8_0tnpc")]
 position = Vector2(-48, 0)
@@ -193,6 +202,9 @@ script = ExtResource("15_ssvqc")
 position = Vector2(-103, 57)
 shape = SubResource("CircleShape2D_rysoc")
 
+[connection signal="body_entered" from="NPC_Wormwood/Area2D2" to="NPC_Wormwood/Area2D2" method="_on_body_entered"]
+[connection signal="body_exited" from="NPC_Wormwood/Area2D2" to="." method="_on_area_2d_2_body_exited"]
+[connection signal="body_exited" from="NPC_Wormwood/Area2D2" to="NPC_Wormwood/Area2D2" method="_on_body_exited"]
 [connection signal="body_entered" from="NPC_Tanya/Area2D2" to="NPC_Tanya/Area2D2" method="_on_body_entered"]
 [connection signal="body_exited" from="NPC_Tanya/Area2D2" to="." method="_on_area_2d_2_body_exited"]
 [connection signal="body_exited" from="NPC_Tanya/Area2D2" to="NPC_Tanya/Area2D2" method="_on_body_exited"]
