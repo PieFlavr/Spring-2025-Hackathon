@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b436d7y2kqwom"]
+[gd_scene load_steps=17 format=3 uid="uid://b436d7y2kqwom"]
 
 [ext_resource type="Script" uid="uid://b6yav0ax6mvxj" path="res://scripts/Global.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bl8gtsmw3ahjf" path="res://scenes/Player.tscn" id="2_lnu2h"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cbphweclp0vy7" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ddai7g0hxjg3w" path="res://scenes/NPC_2Riley.tscn" id="9_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dvjeuhph502wa" path="res://kyle.tscn" id="10_vtaks"]
+[ext_resource type="PackedScene" uid="uid://gy2e86t8a2y" path="res://scenes/conversation_menu.tscn" id="11_kvpfn"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
 texture = ExtResource("3_0tnpc")
@@ -107,3 +108,7 @@ position = Vector2(-181, 67)
 
 [node name="kyle" parent="." instance=ExtResource("10_vtaks")]
 position = Vector2(49, 0)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ConversationMenu" parent="CanvasLayer" instance=ExtResource("11_kvpfn")]
