@@ -2,6 +2,7 @@
 extends Control
 
 @onready var option_button: OptionButton = $Menu/OptionButton
+@onready var character_texture: TextureRect = $"Character Texture"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -13,10 +14,23 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 	
-func displayQuestion(questionList):
-	print("Test")
+func displayQuestion(questionList, characterName):
 	
 	visible = true
+	
+	if characterName == "Croakie":
+		character_texture.texture = load("res://Assets/Character_Art/Croakie.png")
+	elif characterName == "Kyle":
+		character_texture.texture = load("res://Assets/Character_Art/Kyle.png")
+	elif characterName == "Riley":
+		character_texture.texture = load("res://Assets/Character_Art/Riley.png")
+	elif characterName == "Tanya":
+		character_texture.texture = load("res://Assets/Character_Art/Tanya.png")
+	elif characterName == "Wormwood":
+		character_texture.texture = load("res://Assets/Character_Art/Wormwood.png")
+	else:
+		character_texture.visible = false
+	
 	option_button.clear()
 	var index = 0
 	for question in questionList:
