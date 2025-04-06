@@ -93,10 +93,10 @@ color = Color(0.252028, 0.252028, 0.252028, 0.423529)
 [node name="Character Texture" type="TextureRect" parent="."]
 z_index = 1
 layout_mode = 0
-offset_left = 620.0
-offset_top = -29.0
-offset_right = 1120.0
-offset_bottom = 471.0
+offset_left = 746.0
+offset_top = 15.0
+offset_right = 1246.0
+offset_bottom = 515.0
 texture = ExtResource("3_7ewxk")
 
 [connection signal="focus_entered" from="Menu" to="." method="_on_menu_focus_entered"]
