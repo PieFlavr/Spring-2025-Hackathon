@@ -8,8 +8,8 @@ var has_art_token: bool = false
 
 func time_penalty(seconds):
 	var main = get_tree().get_root().get_node("Main")
-	if main.has_method("apply_time_penalty"):
-		main.apply_time_penalty(seconds)
+	#if main.has_method("apply_time_penalty"):
+		#main.apply_time_penalty(seconds)
 var has_ghost_slayer_title = false
 
 #extends Node
