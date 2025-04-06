@@ -1,12 +1,17 @@
-extends Area2D
+extends CharacterBody2D
 
 var interacted := false
 var showing_choices := false
 @onready var label = $DialogueBox/Label
+@onready var conversation_menu: Control = $CanvasLayer/ConversationMenu
 
 func _on_body_entered(body):
+	print("Tanya1")
 	if body.name == "Player" and not interacted:
-		show_choices()
+		print("Tanya2")
+		conversation_menu.displayQuestion(["One", "Two", "Three"])
+
+
 
 func show_choices():
 	showing_choices = true

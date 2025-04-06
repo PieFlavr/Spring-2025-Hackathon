@@ -13,6 +13,9 @@ func _process(delta: float) -> void:
 	pass
 	
 func displayQuestion(questionList):
+	print("Test")
+	
+	visible = true
 	option_button.clear()
 	var index = 0
 	for question in questionList:
@@ -20,5 +23,7 @@ func displayQuestion(questionList):
 		option_button.add_item(question)
 		
 	await option_button.item_selected
+	
+	visible = false
 	
 	return option_button.selected

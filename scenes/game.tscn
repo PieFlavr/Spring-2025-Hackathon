@@ -90,7 +90,7 @@ position_smoothing_speed = 1.0
 position = Vector2(88, 120)
 
 [node name="NPC_Tanya" parent="." instance=ExtResource("8_0tnpc")]
-position = Vector2(-46, 0)
+position = Vector2(-48, 0)
 script = null
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
