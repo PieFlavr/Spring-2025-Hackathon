@@ -18,7 +18,7 @@
 [ext_resource type="Script" uid="uid://75gweortm77b" path="res://scripts/area_2d_kyle.gd" id="15_ssvqc"]
 [ext_resource type="PackedScene" uid="uid://xf2b23k3n76w" path="res://scenes/NPC_Riley.tscn" id="16_rysoc"]
 [ext_resource type="PackedScene" uid="uid://bco7b1u8m6kfm" path="res://scenes/npc_kyle.tscn" id="18_ssvqc"]
-[ext_resource type="PackedScene" path="res://scenes/campfire.tscn" id="19_264po"]
+[ext_resource type="PackedScene" uid="uid://cykfi807g7hlv" path="res://scenes/campfire.tscn" id="19_264po"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
 texture = ExtResource("3_0tnpc")
