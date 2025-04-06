@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://b436d7y2kqwom"]
+[gd_scene load_steps=26 format=3 uid="uid://b436d7y2kqwom"]
 
 [ext_resource type="Script" uid="uid://b6yav0ax6mvxj" path="res://scripts/Global.gd" id="1_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://bl8gtsmw3ahjf" path="res://scenes/Player.tscn" id="2_lnu2h"]
@@ -8,11 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://blvrwhgfli3dt" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png" id="5_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://dt3nands3r7xw" path="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Terrains_TILESET_B-C-D-E.png" id="6_dinhu"]
 [ext_resource type="PackedScene" uid="uid://yyr5tv24fsar" path="res://scenes/npc_tanya.tscn" id="8_0tnpc"]
-[ext_resource type="Script" uid="uid://clqysyuokik4y" path="res://scenes/area_2d_tanya.gd" id="8_dinhu"]
+[ext_resource type="Script" uid="uid://clqysyuokik4y" path="res://scripts/area_2d_tanya.gd" id="8_dinhu"]
 [ext_resource type="PackedScene" uid="uid://cbphweclp0vy7" path="res://scenes/npc_Croakie.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://ddai7g0hxjg3w" path="res://scenes/NPC_2Riley.tscn" id="9_vtaks"]
 [ext_resource type="PackedScene" uid="uid://dvjeuhph502wa" path="res://kyle.tscn" id="10_vtaks"]
+[ext_resource type="Script" uid="uid://br276joenxyhl" path="res://scripts/area_2d_riley.gd" id="11_ca42v"]
 [ext_resource type="PackedScene" uid="uid://gy2e86t8a2y" path="res://scenes/conversation_menu.tscn" id="11_kvpfn"]
+[ext_resource type="Script" uid="uid://c7erfg1pchow" path="res://scripts/area_2d_Croakie.gd" id="13_rysoc"]
+[ext_resource type="Script" uid="uid://75gweortm77b" path="res://scripts/area_2d_kyle.gd" id="15_ssvqc"]
+[ext_resource type="PackedScene" uid="uid://xf2b23k3n76w" path="res://scenes/NPC_Riley.tscn" id="16_rysoc"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kvuet"]
 texture = ExtResource("3_0tnpc")
@@ -104,6 +108,9 @@ radius = 19.0
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lnu2h"]
 distance = -158.0
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_rysoc"]
+radius = 20.025
+
 [node name="Game" type="Node2D"]
 script = ExtResource("1_lbhrr")
 
@@ -144,14 +151,29 @@ position = Vector2(98, 112)
 shape = SubResource("WorldBoundaryShape2D_lnu2h")
 
 [node name="NPC_Riley" parent="." instance=ExtResource("9_vtaks")]
+visible = false
 position = Vector2(29, 73)
 script = null
 
 [node name="NPC_Croakie" parent="." instance=ExtResource("9_0tnpc")]
 position = Vector2(-181, 67)
 
+[node name="Area2D2" type="Area2D" parent="NPC_Croakie"]
+script = ExtResource("13_rysoc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NPC_Croakie/Area2D2"]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_kvuet")
+
 [node name="kyle" parent="." instance=ExtResource("10_vtaks")]
 position = Vector2(49, 0)
+
+[node name="Area2D2" type="Area2D" parent="kyle"]
+script = ExtResource("15_ssvqc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="kyle/Area2D2"]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_kvuet")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -159,6 +181,26 @@ position = Vector2(49, 0)
 unique_name_in_owner = true
 z_index = 2
 
+[node name="NpcRiley" parent="." instance=ExtResource("16_rysoc")]
+position = Vector2(-74, 140)
+
+[node name="Area2D2" type="Area2D" parent="NpcRiley"]
+position = Vector2(103, -67)
+script = ExtResource("11_ca42v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="NpcRiley/Area2D2"]
+position = Vector2(-103, 72)
+shape = SubResource("CircleShape2D_rysoc")
+
 [connection signal="body_entered" from="NPC_Tanya/Area2D2" to="NPC_Tanya/Area2D2" method="_on_body_entered"]
 [connection signal="body_exited" from="NPC_Tanya/Area2D2" to="." method="_on_area_2d_2_body_exited"]
 [connection signal="body_exited" from="NPC_Tanya/Area2D2" to="NPC_Tanya/Area2D2" method="_on_body_exited"]
+[connection signal="body_entered" from="NPC_Croakie/Area2D2" to="NPC_Croakie/Area2D2" method="_on_body_entered"]
+[connection signal="body_exited" from="NPC_Croakie/Area2D2" to="." method="_on_area_2d_2_body_exited"]
+[connection signal="body_exited" from="NPC_Croakie/Area2D2" to="NPC_Croakie/Area2D2" method="_on_body_exited"]
+[connection signal="body_entered" from="kyle/Area2D2" to="kyle/Area2D2" method="_on_body_entered"]
+[connection signal="body_exited" from="kyle/Area2D2" to="." method="_on_area_2d_2_body_exited"]
+[connection signal="body_exited" from="kyle/Area2D2" to="kyle/Area2D2" method="_on_body_exited"]
+[connection signal="body_entered" from="NpcRiley/Area2D2" to="NpcRiley/Area2D2" method="_on_body_entered"]
+[connection signal="body_exited" from="NpcRiley/Area2D2" to="." method="_on_area_2d_2_body_exited"]
+[connection signal="body_exited" from="NpcRiley/Area2D2" to="NpcRiley/Area2D2" method="_on_body_exited"]

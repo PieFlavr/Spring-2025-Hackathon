@@ -1,3 +1,31 @@
-[gd_scene format=3 uid="uid://xf2b23k3n76w"]
+[gd_scene load_steps=5 format=3 uid="uid://xf2b23k3n76w"]
 
-[node name="NpcRiley" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://dseixbt0aws2h" path="res://Assets/Modern tiles_Free/Characters_free/Adam_idle_16x16.png" id="1_6nu4v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ks6h"]
+size = Vector2(14, 21)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w04l7"]
+atlas = ExtResource("1_6nu4v")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_71i76"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w04l7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="NpcRiley" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4.5)
+shape = SubResource("RectangleShape2D_7ks6h")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_71i76")
+animation = &"idle"
