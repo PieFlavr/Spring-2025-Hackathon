@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://yyr5tv24fsar"]
 
-[ext_resource type="Texture2D" uid="uid://dbvhx078t2jw" path="res://Assets/Modern tiles_Free/Characters_free/Alex_idle_16x16.png" id="1_3ejfc"]
+[ext_resource type="Texture2D" uid="uid://dbvhx078t2jw" path="res://assets/Modern tiles_Free/Characters_free/Alex_idle_16x16.png" id="1_3ejfc"]
 [ext_resource type="Script" uid="uid://dt44emut50ly0" path="res://scripts/NPC/npc_tanya.gd" id="1_4shar"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4shar"]

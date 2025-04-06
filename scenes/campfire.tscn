@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cykfi807g7hlv"]
 
-[ext_resource type="Texture2D" uid="uid://yj2f5k4towjh" path="res://Assets/SERENE_VILLAGE_REVAMPED/Animated stuff/campfire_16x16.png" id="1_m47ar"]
+[ext_resource type="Texture2D" uid="uid://yj2f5k4towjh" path="res://assets/SERENE_VILLAGE_REVAMPED/Animated stuff/campfire_16x16.png" id="1_m47ar"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1kice"]
 atlas = ExtResource("1_m47ar")

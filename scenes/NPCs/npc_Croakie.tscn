@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cbphweclp0vy7"]
 
 [ext_resource type="Script" uid="uid://bojxeherkgj64" path="res://scripts/NPC/npc_croakie.gd" id="1_cx1pc"]
-[ext_resource type="Texture2D" uid="uid://dsirqgt1lt43s" path="res://Assets/Modern tiles_Free/Characters_free/Amelia_idle_16x16.png" id="2_cx1pc"]
+[ext_resource type="Texture2D" uid="uid://dsirqgt1lt43s" path="res://assets/Modern tiles_Free/Characters_free/Amelia_idle_16x16.png" id="2_cx1pc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctys0"]
 size = Vector2(14, 20)

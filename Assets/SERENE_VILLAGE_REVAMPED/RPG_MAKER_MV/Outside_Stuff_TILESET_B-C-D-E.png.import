@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://blvrwhgfli3dt"
-path="res://.godot/imported/Outside_Stuff_TILESET_B-C-D-E.png-ac6e3d345f08144411c3893c238b664c.ctex"
+path="res://.godot/imported/Outside_Stuff_TILESET_B-C-D-E.png-f73d80167fffb2342c0a7cdd22993c4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png"
-dest_files=["res://.godot/imported/Outside_Stuff_TILESET_B-C-D-E.png-ac6e3d345f08144411c3893c238b664c.ctex"]
+source_file="res://assets/SERENE_VILLAGE_REVAMPED/RPG_MAKER_MV/Outside_Stuff_TILESET_B-C-D-E.png"
+dest_files=["res://.godot/imported/Outside_Stuff_TILESET_B-C-D-E.png-f73d80167fffb2342c0a7cdd22993c4b.ctex"]
 
 [params]
 

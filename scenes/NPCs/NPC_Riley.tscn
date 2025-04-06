@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://xf2b23k3n76w"]
 
-[ext_resource type="Texture2D" uid="uid://dseixbt0aws2h" path="res://Assets/Modern tiles_Free/Characters_free/Adam_idle_16x16.png" id="1_6nu4v"]
+[ext_resource type="Texture2D" uid="uid://dseixbt0aws2h" path="res://assets/Modern tiles_Free/Characters_free/Adam_idle_16x16.png" id="1_6nu4v"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7ks6h"]
 size = Vector2(14, 21)
