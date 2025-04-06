@@ -72,11 +72,14 @@ func do_idle_state(prev_state: int, delta: float):
 	transition_animation("idle")
 
 func do_walk_state(prev_state: int, delta: float):
-	transition_animation("walk")
 	if abs(input_vector.x) > abs(input_vector.y):
 		anim_sprite.flip_h = input_vector.x < 0
+	if input_vector.y < 0:
+		transition_animation("walk_up")
+	else:
+		transition_animation("walk")
 	velocity = input_vector * speed 
-	
+	can_dash = true
 	move_and_slide() # process movement
 
 func do_dash_state(prev_state: int, delta: float):
