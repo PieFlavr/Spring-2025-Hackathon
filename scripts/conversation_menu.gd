@@ -4,6 +4,7 @@ extends Control
 @onready var option_button: OptionButton = $Menu/OptionButton
 @onready var character_texture: TextureRect = $"Character Texture"
 @onready var question_text: RichTextLabel = $Menu/QuestionText
+@onready var character_name: RichTextLabel = $Menu/CharacterName
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,6 +20,7 @@ func displayText(text, characterName):
 	visible = true
 	
 	question_text.text = text
+	character_name.text = characterName + ":"
 	
 	if characterName == "Croakie":
 		character_texture.texture = load("res://Assets/Character_Art/Croakie.png")
@@ -44,6 +46,7 @@ func displayQuestion(question, answerList, characterName):
 	option_button.visible = true
 	
 	question_text.text = question
+	character_name.text = characterName + ":"
 	
 	if characterName == "Croakie":
 		character_texture.texture = load("res://Assets/Character_Art/Croakie.png")
