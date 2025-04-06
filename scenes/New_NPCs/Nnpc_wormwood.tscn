@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bbsuhvnnwxhn5"]
+
+[ext_resource type="PackedScene" path="res://scenes/Generics/talk_interact.tscn" id="1_b2qiu"]
+[ext_resource type="Texture2D" uid="uid://bflcpg4ywp1v" path="res://Assets/Modern tiles_Free/Characters_free/Bob_idle_16x16.png" id="2_hx0h8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b2qiu"]
+radius = 19.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hx0h8"]
+size = Vector2(14, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45q11"]
+atlas = ExtResource("2_hx0h8")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ur5iu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45q11")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="NnpcWormwood" type="CharacterBody2D"]
+
+[node name="TalkInteract" parent="." instance=ExtResource("1_b2qiu")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TalkInteract"]
+position = Vector2(0, -11)
+shape = SubResource("CircleShape2D_b2qiu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -11)
+shape = SubResource("RectangleShape2D_hx0h8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -15)
+sprite_frames = SubResource("SpriteFrames_ur5iu")
+
+[editable path="TalkInteract"]
